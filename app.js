@@ -1,0 +1,46 @@
+const mess = document.getElementById("action");
+
+let student = [
+    {
+        name: "NVA",
+        age: 16,
+        course: ["mindX 01", "mindX 02", "mindX 03"]
+    },
+    {
+        name: "NVB",
+        age: 18,
+        course: ["mindX 01", "mindX 02", "mindX 04"]
+    },
+    {
+        name: "NVC",
+        age: 17,
+        course: ["mindX 01", "mindX 03", "mindX 04"]
+    },
+    {
+        name: "NVD",
+        age: 15,
+        course: ["mindX 01", "mindX 02", "mindX 03"]
+    }
+]
+
+function Bai1(){
+    let age = prompt("Độ tuổi cần tìm?")
+    let notfound = true
+
+    student.forEach(item => {
+        if (item.age == age){
+            mess.innerHTML = item.name
+            notfound = false
+            return
+        }
+    })
+
+    if (notfound == true){
+        mess.innerHTML = 'Item not found'
+    }
+}
+
+function Bai2(){
+    mess.innerHTML = "I love Hutao";
+    console.log("still love hutao");
+}
